@@ -13,7 +13,7 @@ RSpec.describe PagesController, type: :controller do
     end
 
     it "doit avoir dans son title (HTML) le mot accueil" do
-      expect(response.body).to have_title("Simple App du Tutoriel Ruby on Rails | Accueil")
+      expect(response.body).to have_title("Accueil")
     end
   end
 
@@ -27,7 +27,7 @@ RSpec.describe PagesController, type: :controller do
     end
 
     it "doit avoir dans son title (HTML) le mot accueil" do
-      expect(response.body).to have_title("Simple App du Tutoriel Ruby on Rails | Accueil")
+      expect(response.body).to have_title("Contact")
     end
   end
 
@@ -41,7 +41,7 @@ RSpec.describe PagesController, type: :controller do
     end
 
     it "doit avoir dans son title (HTML) le mot accueil" do
-      expect(response.body).to have_title("Simple App du Tutoriel Ruby on Rails | Accueil")
+      expect(response.body).to have_title("About")
     end
   end
 
