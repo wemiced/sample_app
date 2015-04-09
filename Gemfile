@@ -7,7 +7,6 @@ gem 'bcrypt'
 gem 'bootstrap-sass'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -36,10 +35,15 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# gem 'capistrano-rai ls', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :production do
+  gem 'pg'
+  gem 'puma', '2.11.1'
+end
 
 group :development do
   gem 'rspec-rails'
