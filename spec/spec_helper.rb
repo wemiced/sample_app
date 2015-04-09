@@ -21,6 +21,9 @@ require 'capybara/rspec'
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
 RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
 
