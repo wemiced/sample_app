@@ -1,1 +1,5 @@
-name : <%= @user.name %>, email : <%= @user.email %>
+<% content_for(:title, @user.name) %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
