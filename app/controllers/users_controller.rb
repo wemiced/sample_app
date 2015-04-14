@@ -6,12 +6,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    #binding.pry
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       flash[:success] = "Bienvenue sur ma sublime app"
       redirect_to @user
     else

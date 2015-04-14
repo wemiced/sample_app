@@ -25,7 +25,11 @@ require 'capybara/rspec'
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
   config.include Rails.application.routes.url_helpers
+
+  config.fixture_path = "#{Rails.root}/spec/fixtures"
+  config.global_fixtures = :all
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

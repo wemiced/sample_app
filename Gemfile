@@ -54,3 +54,8 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
 end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'faker', github: 'stympy/faker'
+end
